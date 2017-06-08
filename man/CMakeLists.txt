@@ -20,7 +20,7 @@ set(MISC_MAN1
 
 install(FILES
   ${OTOOL_MAN1}
-  # ${MISC_MAN1}
+  ${MISC_MAN1}
   # ${AS_MAN1}
   # ${RANLIB_MAN1}
   # ${GPROF_MAN1} # removed after cctools-839

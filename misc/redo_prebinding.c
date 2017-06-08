@@ -9348,6 +9348,8 @@ uint32_t vmslide)
 }
 
 #ifndef LIBRARY_API
+/* (warning|error|fatal)_arch are in libstuff/fatal_arch.c */
+#if 0
 /*
  * Print the warning message and the input file.
  */
@@ -9441,6 +9443,7 @@ char *format,
 	    exit(0);
 	exit(2);
 }
+#endif /* 0 */
 
 #else /* defined(LIBRARY_API) */
 
