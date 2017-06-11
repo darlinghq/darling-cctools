@@ -8,7 +8,7 @@ FUNCTION(add_cctools_misc exe)
 	set_target_properties(${exe}_cctools_misc
 		PROPERTIES OUTPUT_NAME ${exe})
 	install(TARGETS ${exe}_cctools_misc
-		DESTINATION libexec/darling/bin)
+		DESTINATION libexec/darling/usr/bin)
 ENDFUNCTION(add_cctools_misc)
 
 add_cctools_misc(lipo)
