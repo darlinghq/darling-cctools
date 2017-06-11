@@ -25,4 +25,4 @@ add_darling_executable(otool
 	$<TARGET_OBJECTS:libstuff>)
 target_link_libraries(otool cxx objc)
 
-install(TARGETS otool DESTINATION libexec/darling/usr/bin)
+install(TARGETS otool DESTINATION ${CCTOOLS_INSTALL_DEST})
