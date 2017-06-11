@@ -1,7 +1,7 @@
 project(libstuff)
 
 add_definitions(
-	-DCCTOOLS_VERSION="\\"995\\""
+	-DCCTOOLS_VERSION="\\"${CCTOOLS_VERSION}\\""
 	)
 
 set(stuff_sources
