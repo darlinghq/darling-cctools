@@ -32,7 +32,7 @@ add_cctools_misc(bitcode_strip)
 # nm is xcselect shim
 # add_cctools_misc(nm)
 
-# add_cctools_misc(libtool)
+add_cctools_misc(libtool)
 
 # TODO: nmedit -- strip with -DNMEDIT
 # TODO: libredo_prebinding

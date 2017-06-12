@@ -59,6 +59,11 @@
 #include <servers/bootstrap.h>
 #endif
 
+// see stuff/bool.h
+#ifdef bool
+#undef bool
+#endif
+
 /*
  * This is used internally to build the table of contents.
  */
