@@ -8,7 +8,7 @@ FUNCTION(add_cctools_misc exe)
 	set_target_properties(${exe}_cctools_misc
 		PROPERTIES OUTPUT_NAME ${exe})
 	install(TARGETS ${exe}_cctools_misc
-		DESTINATION libexec/darling/usr/bin)
+		DESTINATION ${CCTOOLS_INSTALL_DEST})
 ENDFUNCTION(add_cctools_misc)
 
 add_cctools_misc(lipo)
@@ -28,9 +28,7 @@ add_cctools_misc(install_name_tool)
 add_cctools_misc(codesign_allocate)
 add_cctools_misc(ctf_insert)
 add_cctools_misc(bitcode_strip)
-
-# nm is xcselect shim
-# add_cctools_misc(nm)
+add_cctools_misc(nm)
 
 # add_cctools_misc(libtool)
 
