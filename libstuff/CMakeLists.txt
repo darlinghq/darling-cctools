@@ -16,4 +16,4 @@ set(stuff_sources
   apple_version.c
 )
 
-add_library(libstuff OBJECT ${stuff_sources})
+add_darling_object_library(libstuff ${stuff_sources})
