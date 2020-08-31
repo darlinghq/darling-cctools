@@ -106,7 +106,12 @@
 #import <stuff/hppa.h>
 #import <stuff/execute.h>
 #import <stuff/guess_short_name.h>
+#ifdef DARLING
+// wtf, Apple?! where do you guys *think* you're getting the definitions that are actually in this file?
+#import <stuff/seg_addr_table.h>
+#else
 //#import <stuff/seg_addr_table.h>
+#endif
 #import <stuff/macosx_deployment_target.h>
 
 #include <mach-o/dyld.h>

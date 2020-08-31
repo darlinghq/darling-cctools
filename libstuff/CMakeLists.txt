@@ -48,4 +48,6 @@ set(stuff_sources
   writeout.c
 )
 
-add_darling_object_library(libstuff ${stuff_sources})
+# can't be an object library because Apple relies on certain behavior specific to how static libraries work
+# (like ignoring duplicate symbols)
+add_darling_static_library(libstuff FAT SOURCES ${stuff_sources})

@@ -542,8 +542,10 @@ void *cookie)
 	process_flags.nlibs = 0;
 	process_flags.lib_names = NULL;
 
+#ifdef LTO_SUPPORT // check added for Darling (seems like an omission on Apple's part, though)
 	llvm_bundle_pointer = NULL;
 	llvm_bundle_size = 0;
+#endif
 
 	if(ofile->mh == NULL && ofile->mh64 == NULL){
 #ifdef LTO_SUPPORT

@@ -20,9 +20,7 @@ set(otool_sources
 	dyld_bind_info.c
 )
 
-add_darling_executable(otool 
-	${otool_sources} 
-	$<TARGET_OBJECTS:libstuff>)
-target_link_libraries(otool cxx objc)
+add_darling_executable(otool ${otool_sources})
+target_link_libraries(otool libstuff cxx objc)
 
 install(TARGETS otool DESTINATION ${CCTOOLS_INSTALL_DEST})

@@ -2,9 +2,8 @@ project(cctools_misc)
 
 # To avoid name conflicts with tools from cctools-port
 FUNCTION(add_cctools_misc exe)
-	add_darling_executable(${exe}_cctools_misc
-		${exe}.c
-		$<TARGET_OBJECTS:libstuff>)
+	add_darling_executable(${exe}_cctools_misc ${exe}.c)
+	target_link_libraries(${exe}_cctools_misc libstuff)
 	set_target_properties(${exe}_cctools_misc
 		PROPERTIES OUTPUT_NAME ${exe})
 	install(TARGETS ${exe}_cctools_misc
@@ -31,7 +30,11 @@ add_cctools_misc(bitcode_strip)
 add_cctools_misc(nm)
 
 add_cctools_misc(libtool)
-add_cctools_misc(vtool)
+
+# vtool is different (no libstuff)
+add_darling_executable(vtool_cctools_misc vtool.c)
+set_target_properties(vtool_cctools_misc PROPERTIES OUTPUT_NAME vtool)
+install(TARGETS vtool_cctools_misc DESTINATION ${CCTOOLS_INSTALL_DEST})
 
 # TODO: nmedit -- strip with -DNMEDIT
 # TODO: libredo_prebinding
