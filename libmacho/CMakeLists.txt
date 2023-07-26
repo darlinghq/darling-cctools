@@ -1,6 +1,6 @@
 project(libmacho)
 
-cmake_minimum_required(VERSION 3.10)
+cmake_minimum_required(VERSION 3.13)
 
 add_definitions(-DHAVE_STDINT_H=1)
 
